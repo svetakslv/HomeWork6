@@ -18,6 +18,7 @@ public class Main {
             sum += arr[i];
             int num1 = arr[0];
             int num2 = arr[2];
+            int divSum = sum / arr.length;
 
             ///if (i == arr.length - 1) {
             ///arr[i] = random.nextInt(100_000) + 100_000;
@@ -60,6 +61,7 @@ public class Main {
                 if (num1 != 0 && num2 != 0) {
 
                     System.out.println("2. Максимальная сумма трат за день составила " + Math.max(num1, num2) + " рублей. Минимальная сумма трат за день составила " + Math.min(num1, num2) + " рублей.");
+                    System.out.println("3. Средняя сумма трат за месяц составила " + divSum + "рублей.");
                     break;
                 }
             }
