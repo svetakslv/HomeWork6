@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        ///Задача №1,2,
+        ///Задача №1,2,3
         Random random = new Random();
         int[] arr = new int[30];
         int sum = 0;
