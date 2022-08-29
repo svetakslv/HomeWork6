@@ -1,6 +1,8 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
+
 
 public class Main {
 
@@ -8,12 +10,15 @@ public class Main {
     public static void main(String[] args) {
 
 
-        ///Задача №1
+        ///Задача №1,2,
         Random random = new Random();
         int[] arr = new int[30];
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
+            int num1 = arr[0];
+            int num2 = arr[2];
+
             ///if (i == arr.length - 1) {
             ///arr[i] = random.nextInt(100_000) + 100_000;
             arr[0] = random.nextInt(100_000) + 100_000;
@@ -46,13 +51,19 @@ public class Main {
             arr[27] = random.nextInt(100_000) + 100_000;
             arr[28] = random.nextInt(100_000) + 100_000;
             arr[29] = random.nextInt(100_000) + 100_000;
+
+            if (sum > 0) {
+                Collections.shuffle(Arrays.asList(arr));
+                /// System.out.println(Arrays.toString(arr) + " ");
+                System.out.println("1. Сумма трат за месяц составила " + sum + " рублей.");
+
+                if (num1 != 0 && num2 != 0) {
+
+                    System.out.println("2. Максимальная сумма трат за день составила " + Math.max(num1, num2) + " рублей. Минимальная сумма трат за день составила " + Math.min(num1, num2) + " рублей.");
+                    break;
+                }
+            }
         }
-
-
-        Collections.shuffle(Arrays.asList(arr));
-        /// System.out.println(Arrays.toString(arr) + " ");
-        System.out.println("Сумма трат за месяц составила " + sum + " рублей.");
-
     }
 }
 
